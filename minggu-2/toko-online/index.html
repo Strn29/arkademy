@@ -1,0 +1,231 @@
+<html>
+    <head>
+        <title>Toko-Online Sneakers</title>
+        <style>
+               body{
+                      background-image: url(assets/img/hyp.jpg);
+               }
+            .item {
+                flex: 1;
+                background: burlywood;
+                margin: 10px;
+                text-align: center;
+                border: 1px black;
+                border-radius: 20px;
+            }
+            .item:hover{
+                   background: orange;
+            }
+            #item-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .item .gambar img{
+                width: 150px;
+                margin: 30px;
+                height:150px;
+            }
+            .pemisah{
+                display: block;
+            }
+            .judul{
+                   text-align: center;
+            }
+            #item-list div .warna::before{
+                   color: white;
+                   content: "Warna :"
+            }
+            #item-list div .nama::before{
+                   color: white;
+                   content: "Merk :"
+            }
+            #item-list div .ukuran::before{
+                   color: white;
+                   content: "ukuran :"
+            }
+            #item-list div .harga::before{
+                   color: white;
+                   content: "Harga :"
+            }
+            footer {
+	background-color: burlywood;
+	text-indent: 50px;
+	color: white;
+}
+        </style>
+    </head>
+    <body>
+           <center>
+           <h1 class="judul">UnStore_SNEAKERS</h1>
+        <div id="item-list"></div>
+        <script>
+            let item = [
+         {
+            "Nama":"Nike Air Jordan 9 retro",
+            "Gambar":"assets/img/1.jpg",
+            "Ukuran":"44",
+            "Warna":"Biru",
+            "Harga":"RP. 12.000.000"
+     },
+     {
+            "Nama":"Adidas Ultra Boost",
+            "Gambar":"assets/img/2.jpg",
+            "Ukuran":"42",
+            "Warna":"Putih",
+            "Harga":"RP. 5.000.000"
+     },
+     {
+            "Nama":"converse Looney Toons ",
+            "Gambar":"assets/img/3.jpg",
+            "Ukuran":"46",
+            "Warna":"putih",
+            "Harga":"RP. 12.600.000"
+     },
+     {
+            "Nama":"Adidas X Bape",
+            "Gambar":"assets/img/4.jpg",
+            "Ukuran":"42",
+            "Warna":"Hijau",
+            "Harga":"RP. 8.500.000"
+     },
+     {
+            "Nama":"Nike Air Max 97",
+            "Gambar":"assets/img/5.jpg",
+            "Ukuran":"45",
+            "Warna":"Hitam",
+            "Harga":"RP. 15.000.000"
+     },
+     {
+            "Nama":"Nike Air Jordan X Indomie",
+            "Gambar":"assets/img/6.jpg",
+            "Ukuran":"39",
+            "Warna":"Putih",
+            "Harga":"RP. 10.000.000"
+     },
+     {
+            "Nama":"Converse X Off White",
+            "Gambar":"assets/img/7.jpg",
+            "Ukuran":"45",
+            "Warna":"Putih",
+            "Harga":"RP. 10.500.000"
+     },
+     {
+            "Nama":"Adidas Yezzy 700",
+            "Gambar":"assets/img/8.jpg",
+            "Ukuran":"41",
+            "Warna":"Putih",
+            "Harga":"RP. 11.000.000"
+     },
+     {
+            "Nama":"Balenciaga",
+            "Gambar":"assets/img/9.jpg",
+            "Ukuran":"43",
+            "Warna":"Hitam",
+            "Harga":"RP. 7.000.000"
+     },
+     {
+            "Nama":"Reebok Lesmills",
+            "Gambar":"assets/img/10.jpg",
+            "Ukuran":"45",
+            "Warna":"Biru Tua",
+            "Harga":"RP. 3.000.000"
+     },
+     {
+            "Nama":"Puma Hybrid Rocket",
+            "Gambar":"assets/img/11.jpg",
+            "Ukuran":"40",
+            "Warna":"Hitam",
+            "Harga":"RP. 7.500.000"
+     },
+     {
+            "Nama":"Ultra Boost Gold Medal",
+            "Gambar":"assets/img/12.jpg",
+            "Ukuran":"43",
+            "Warna":"Hitam",
+            "Harga":"RP. 6.000.000"
+     },
+     {
+            "Nama":"Nike Cortez",
+            "Gambar":"assets/img/13.jpg",
+            "Ukuran":"44",
+            "Warna":"Putih",
+            "Harga":"RP. 3.000.000"
+     },
+     {
+            "Nama":"Adidas Kodachi",
+            "Gambar":"assets/img/14.jpg",
+            "Ukuran":"42",
+            "Warna":"Putih",
+            "Harga":"RP. 1.000.000"
+     },
+     {
+            "Nama":"Assics Onitsuka",
+            "Gambar":"assets/img/15.jpg",
+            "Ukuran":"43",
+            "Warna":"Putih",
+            "Harga":"RP. 5.000.000"
+     },
+     {
+            "Nama":"Adidas Yezzy 350",
+            "Gambar":"assets/img/16.jpg",
+            "Ukuran":"41",
+            "Warna":"Hijau",
+            "Harga":"RP. 8.000.000"
+     },
+     {
+            "Nama":"Adidas Alpha Edge",
+            "Gambar":"assets/img/17.jpg",
+            "Ukuran":"41",
+            "Warna":"Hitam",
+            "Harga":"RP. 7.000.000"
+     },
+     {
+            "Nama":"Nike Air Jordan Rarest",
+            "Gambar":"assets/img/18.webp",
+            "Ukuran":"43",
+            "Warna":"Putih",
+            "Harga":"RP. 9.000.000"
+     },
+     {
+            "Nama":"FYC Caven Green Yellow",
+            "Gambar":"assets/img/19.jpg",
+            "Ukuran":"41",
+            "Warna":"Hijau",
+            "Harga":"RP. 2.000.000"
+     },
+     {
+            "Nama":"Adidas Handball Sesial",
+            "Gambar":"assets/img/20.jpg",
+            "Ukuran":"44",
+            "Warna":"Hijau",
+            "Harga":"RP. 2.000.000"
+     },
+    ];
+    for(x in item){
+        let namaItem = item[x].Nama;
+        let gambarItem = item[x].Gambar;
+        let ukuranItem = item[x].Ukuran;
+        let warnaItem = item[x].Warna;
+        let hargaItem = item[x].Harga;
+
+        document.getElementById('item-list').innerHTML+="\
+        <div class='item'>\
+        <div class='gambar'><img src='"+gambarItem+"' alt=''/></div>\
+        <div class='nama'>"+namaItem+"</div>\
+        <div class='warna'>"+warnaItem+"</div>\
+        <div class='ukuran'>"+ukuranItem+"</div>\
+        <div class='harga'>"+hargaItem+"</div>\
+        <\div>\
+        ";
+        if(((x+1)/5)===3){
+            document.getElementById('item-list').innerHTML+="\
+            <div class='pemisah'></div>\
+            ";
+        }
+    };
+        </script>
+        <footer>
+                <p> &copy; Ananda Zidane Satriani, 2019</p>
+       </footer>
+    </body>
+</html>

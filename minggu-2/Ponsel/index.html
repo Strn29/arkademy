@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <title>Toko-Online Sneakers</title>
+        <style>
+               body{
+                      background: whitesmoke;
+               }
+            .item {
+                flex: 1;
+                background: burlywood;
+                margin: 10px;
+                text-align: center;
+                border: 1px black;
+                border-radius: 20px;
+            }
+            .item:hover{
+                   background: orange;
+            }
+            #item-list {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .item .gambar img{
+                width: 200px;
+                margin: 30px;
+                height:200px;
+            }
+            .pemisah{
+                display: block;
+            }
+            .judul{
+                   text-align: center;
+            }
+            #item-hp div .warna::before{
+                   color: white;
+                   content: "Warna :"
+            }
+            #item-hp div .nama::before{
+                   color: white;
+                   content: "Merk :"
+            }
+            #item-hp div .storage::before{
+                   color: white;
+                   content: "Storage :"
+            }
+            #item-hp div .harga::before{
+                   color: white;
+                   content: "Harga :"
+            }
+            footer {
+	background-color: burlywood;
+	text-indent: 50px;
+	color: white;
+}
+        </style>
+    </head>
+    <body>
+           <center>
+           <h1 class="judul">HP Sultan</h1>
+        <div id="item-hp"></div>
+        <script>
+            let item = [
+         {
+            "Nama":"Honor 10i",
+            "Gambar":"assets/img/10i.jpg",
+            "Storage":"Ram:6GB,Rom:256,Batre:5000mAh",
+            "Warna":"ungu",
+            "Harga":"RP. 6.000.000"
+     },
+     {
+            "Nama":"Samsung A10",
+            "Gambar":"assets/img/A10.jpg",
+            "Storage":"Ram:3GB,Rom:32,Batre:3400mAh",
+            "Warna":"Biru",
+            "Harga":"RP. 2.000.000"
+     },
+     {
+            "Nama":"Oppo R17 ",
+            "Gambar":"assets/img/r17.jpg",
+            "Storage":"Ram:6GB,Rom:128GB,Batre:3500mAh",
+            "Warna":"Biru",
+            "Harga":"RP. 9.000.000"
+     },
+     {
+            "Nama":"Vivo V15",
+            "Gambar":"assets/img/v15.jpg",
+            "Storage":"Ram:6GB,Rom:128GB,Batre:4000mAh",
+            "Warna":"Hitam",
+            "Harga":"RP. 4.500.000"
+     },
+     {
+            "Nama":"Iphone XS MAx",
+            "Gambar":"assets/img/xs.jpg",
+            "Storage":"Rom:256GB, OS:Ios A12",
+            "Warna":"Hitam",
+            "Harga":"RP. 15.000.000"
+     },
+    ];
+    for(x in item){
+        let namaItem = item[x].Nama;
+        let gambarItem = item[x].Gambar;
+        let storageItem = item[x].Storage;
+        let warnaItem = item[x].Warna;
+        let hargaItem = item[x].Harga;
+
+        document.getElementById('item-hp').innerHTML+="\
+        <div class='item'>\
+        <div class='gambar'><img src='"+gambarItem+"' alt=''/></div>\
+        <div class='nama'>"+namaItem+"</div>\
+        <div class='warna'>"+warnaItem+"</div>\
+        <div class='storage'>"+storageItem+"</div>\
+        <div class='harga'>"+hargaItem+"</div>\
+        <\div>\
+        ";
+        if(((x+1)/5)===3){
+            document.getElementById('item-hp').innerHTML+="\
+            <div class='pemisah'></div>\
+            ";
+        }
+    };
+        </script>
+        <footer>
+                <p> &copy; Ananda Zidane Satriani, 2019</p>
+       </footer>
+    </body>
+</html>
