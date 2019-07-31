@@ -1,0 +1,29 @@
+.pertambahan {
+    border: 2px solid;
+    border-radius: 6px;
+    margin: auto;
+    padding: 2px;
+    background-color:lightseagreen;
+}
+
+.perkalian {
+    margin-top: 2px;
+    border-radius: 6px;
+    border: 2px solid;
+    padding: 2px;
+    background-color: lightblue;
+}
+
+.pembagian {
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 6px;
+    border: 2px solid;
+    background-color: lightgreen;
+}
+
+footer {
+	background-color: #fc9952;
+	text-indent: 50px;
+	color: white;
+}
