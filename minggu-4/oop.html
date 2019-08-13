@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Operasi Hitung</title>
+    </head>
+<body>
+    <div id="oop"></div>
+
+    <script>
+        class OperasiHitung{
+            pertambahan(a,b){
+                return a+b
+            }
+            perkalian(a,b){
+                return a*b
+            }
+            pembagian(a,b){
+                return a/b
+            }
+            pengurangan(){
+                return a-b
+            }
+        }
+
+        const OH = new OperasiHitung()
+        document.getElementById("oop").innerHTML = OH.pembagian(20,4);
+    </script>
+</body>
+</html>
