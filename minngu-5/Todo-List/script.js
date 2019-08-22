@@ -27,7 +27,7 @@ class TodoList{
 
     listItem = ()=>{
        for(let x in todo){
-       this.item.innerHTML+='<div class="list-item">'+todo[x].title+'</div>'
+        this.item.innerHTML+='<div class="list-item">'+todo[x].title+'</div>'
        }
     }
     seDisplay = (n=0)=>{
