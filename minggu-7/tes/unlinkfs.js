@@ -7,7 +7,7 @@ fs.readFile('terserah.txt', async (err, data) => {
 
     fs.unlink('terserah.txt', (err) => {
 
-    if(err) return` console.log("Gagal hapus data");
+    if(err) return console.log("Gagal hapus data");
 
    console.log("Hapus data berhasil")
 
